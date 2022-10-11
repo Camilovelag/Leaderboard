@@ -1,3 +1,7 @@
-body {
-  font-family: Cambria, serif;
+main,
+header {
+  display: flex;
+  width: 30vw;
+  justify-content: space-between;
+  margin: 0 auto;
 }
