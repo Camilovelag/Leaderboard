@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _ from 'lodash'; // eslint-disable-line
 import './style.css';
 import Score from './modules/score.js';
 import refreshpage from './modules/refresh.js';
@@ -6,14 +6,14 @@ import refreshpage from './modules/refresh.js';
 const form = document.querySelector('form');
 const refresh = document.getElementById('refresh');
 
-//refresh scoreboard
+// refresh scoreboard
 
 refresh.addEventListener('click', (e) => {
   e.preventDefault();
   refreshpage();
 });
 
-//add new score
+// add new score
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();

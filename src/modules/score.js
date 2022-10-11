@@ -6,10 +6,9 @@ export default class Score {
     this.score = score;
   }
 
-  //render score
+  // render score
   renderScore() {
     const li = `<li>${this.name} : ${this.score} (new)</li>`;
     scores.insertAdjacentHTML('beforeend', li);
   }
-
 }
