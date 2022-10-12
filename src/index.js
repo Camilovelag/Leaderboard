@@ -7,6 +7,7 @@ import renderScores from './modules/renderScores.js';
 
 const form = document.querySelector('form');
 const refresh = document.getElementById('refresh');
+const footer = document.querySelector('footer');
 
 // refresh scoreboard
 
@@ -39,3 +40,4 @@ createGame.addEventListener('click', (e) => {
 });
 
 renderScores();
+footer.style.display = 'none';
