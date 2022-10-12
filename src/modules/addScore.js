@@ -1,5 +1,7 @@
 export default function addScore(score) {
-  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/VjVNGQKZVCoeZvJq77or/scores/';
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BvO8vFzK4jDXs4qpBNTL/scores/';
+  // const gameID = 'RaTJCwwMRlIaoKro7oGg';
+  console.log(`${url}`);
   fetch(`${url}`, {
     method: 'POST',
     body: JSON.stringify(score),

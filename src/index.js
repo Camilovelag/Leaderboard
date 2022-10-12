@@ -2,7 +2,7 @@ import _ from 'lodash'; // eslint-disable-line
 import './style.css';
 import Score from './modules/score.js';
 import refreshpage from './modules/refresh.js';
-// import newGame from './modules/gameID.js';
+import newGame from './modules/gameID.js';
 import addScore from './modules/addScore.js';
 import renderScores from './modules/renderScores.js';
 
@@ -23,14 +23,17 @@ form.addEventListener('submit', (e) => {
 
   const name = document.getElementById('name').value;
   const score = document.getElementById('score').value;
-
   const newScore = new Score(name, score);
   addScore(newScore);
-  newScore.renderScore();
-
   form.reset();
 });
 
 renderScores();
 
-// newGame();
+const createGame = document.getElementById('newGame');
+createGame.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (confirm('Sure you want to create a new game?')) {
+    newGame();
+  }
+});
