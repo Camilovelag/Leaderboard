@@ -2,7 +2,8 @@ import _ from 'lodash'; // eslint-disable-line
 import './style.css';
 import Score from './modules/score.js';
 import refreshpage from './modules/refresh.js';
-import newGame from './modules/gameID.js';
+// import newGame from './modules/gameID.js';
+import addScore from './modules/addScore.js';
 
 const form = document.querySelector('form');
 const refresh = document.getElementById('refresh');
@@ -23,9 +24,10 @@ form.addEventListener('submit', (e) => {
   const score = document.getElementById('score').value;
 
   const newScore = new Score(name, score);
+  addScore(newScore);
   newScore.renderScore();
 
   form.reset();
 });
 
-newGame();
+// newGame();

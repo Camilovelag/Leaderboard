@@ -1,6 +1,6 @@
 export default function newGame() {
   const gameName = {
-    "name": "My awesome new game",
+    name: 'My awesome new game',
   };
 
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
@@ -11,5 +11,9 @@ export default function newGame() {
     },
   })
     .then((response) => response.json())
-    .then((json) => console.log(json));
+    .then((json) => {
+      const gameID = json.result.split(' ')[3];
+      console.log(gameID);
+      return gameID;
+    });
 }
