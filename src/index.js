@@ -39,5 +39,7 @@ createGame.addEventListener('click', (e) => {
   }
 });
 
+const gameId = 'BsB5KoZfAhoYwOzGkskM';
+localStorage.setItem('game-ID', gameId);
 renderScores();
 footer.style.display = 'none';
