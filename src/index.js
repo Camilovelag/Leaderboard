@@ -4,6 +4,7 @@ import Score from './modules/score.js';
 import refreshpage from './modules/refresh.js';
 // import newGame from './modules/gameID.js';
 import addScore from './modules/addScore.js';
+import renderScores from './modules/renderScores.js';
 
 const form = document.querySelector('form');
 const refresh = document.getElementById('refresh');
@@ -29,5 +30,7 @@ form.addEventListener('submit', (e) => {
 
   form.reset();
 });
+
+renderScores();
 
 // newGame();
