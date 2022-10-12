@@ -19,5 +19,5 @@ li {
 footer {
   background-color: rgb(208, 255, 0);
   position: fixed;
-  bottom: 0;
+  bottom: 2rem;
 }
