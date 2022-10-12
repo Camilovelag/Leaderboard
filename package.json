@@ -5,10 +5,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-server": "webpack serve --open",
+    "start": "webpack serve --open",
     "build": "webpack--mode production",
     "dev": "webpack --mode development",
-    "start": "webpack --config webpack.config.js --watch"
+    "start-2": "webpack --config webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
