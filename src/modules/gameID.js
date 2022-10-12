@@ -11,8 +11,8 @@ const newGame = async () => {
     },
   });
   const fetched = await response.json();
-  const gameID = fetched.result.split(' ')[3];
-  localStorage.setItem('game-ID', gameID);
+  const gameId = fetched.result.split(' ')[3];
+  localStorage.setItem('game-ID', gameId);
 };
 
 export default newGame;

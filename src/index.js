@@ -1,7 +1,7 @@
 import _ from 'lodash'; // eslint-disable-line
 import './style.css';
 import Score from './modules/score.js';
-import newGame from './modules/gameID.js';
+import newGame from './modules/gameId.js';
 import addScore from './modules/addScore.js';
 import renderScores from './modules/renderScores.js';
 
