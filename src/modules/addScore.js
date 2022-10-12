@@ -1,5 +1,7 @@
 const addScore = async (score) => {
-  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/iwN8wBNmYfSm0NhEOvs2/scores/';
+  const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+  const gameID = localStorage.getItem('game-ID');
+  const url = `${api}${gameID}/scores/`;
   await fetch(`${url}`, {
     method: 'POST',
     body: JSON.stringify(score),

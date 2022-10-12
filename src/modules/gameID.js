@@ -1,23 +1,18 @@
-const newGame = () => {
+const newGame = async () => {
   const gameName = {
     name: 'My awesome new game',
   };
 
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
     method: 'POST',
     body: JSON.stringify(gameName),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
-    .then((response) => response.json())
-    .then((json) => {
-      const gameID = json.result.split(' ')[3];
-      // ID needed to link with API scoreboard DB
-      // eslint-disable-next-line no-console
-      console.log(gameID);
-      return gameID;
-    });
+  });
+  const fetched = await response.json();
+  const gameID = fetched.result.split(' ')[3];
+  localStorage.setItem('game-ID', gameID);
 };
 
 export default newGame;

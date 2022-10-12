@@ -1,5 +1,4 @@
 const refreshpage = () => {
-  localStorage.clear();
   window.location.reload();
 };
 
