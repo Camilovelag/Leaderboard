@@ -1,4 +1,4 @@
-export default function newGame() {
+const newGame = () => {
   const gameName = {
     name: 'My awesome new game',
   };
@@ -13,7 +13,11 @@ export default function newGame() {
     .then((response) => response.json())
     .then((json) => {
       const gameID = json.result.split(' ')[3];
+      // ID needed to link with API scoreboard DB
+      // eslint-disable-next-line no-console
       console.log(gameID);
       return gameID;
     });
-}
+};
+
+export default newGame;

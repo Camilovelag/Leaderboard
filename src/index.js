@@ -25,15 +25,18 @@ form.addEventListener('submit', (e) => {
   const score = document.getElementById('score').value;
   const newScore = new Score(name, score);
   addScore(newScore);
+  renderScores();
   form.reset();
 });
 
-renderScores();
-
+// create new game
 const createGame = document.getElementById('newGame');
 createGame.addEventListener('click', (e) => {
   e.preventDefault();
+  // eslint-disable-next-line no-alert, no-restricted-globals
   if (confirm('Sure you want to create a new game?')) {
     newGame();
   }
 });
+
+renderScores();
