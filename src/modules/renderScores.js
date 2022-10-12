@@ -1,6 +1,6 @@
 const renderScores = async () => {
   const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
-  const gameID = localStorage.getItem('game-ID');
+  const gameID = localStorage.getItem('game-ID') || 'BsB5KoZfAhoYwOzGkskM';
   const url = `${api}${gameID}/scores/`;
   const scores = document.getElementById('scores');
 
