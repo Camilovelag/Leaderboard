@@ -1,23 +1,77 @@
+html * {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: #333;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  width: 50vw;
-  margin: 0 auto;
+  width: 70vw;
+  margin: 2rem auto;
 }
 
 main,
 header,
+form,
 footer,
 .title {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+main {
+  margin: 2rem;
+  gap: 1rem 2rem;
+}
+
+ul,
+input {
+  border: 3px solid #333;
+  border-radius: 0.25rem;
+  width: 93%;
+  margin: 0.5rem 0;
 }
 
 li {
   list-style: none;
+  padding: 0.2rem;
+}
+
+li,
+button,
+input {
+  font-size: 0.7rem;
+  padding: 0 3px;
+}
+
+li:nth-child(even) {
+  background-color: lightgray;
 }
 
 footer {
   background-color: rgb(208, 255, 0);
   position: fixed;
   bottom: 2rem;
+}
+
+button {
+  background-color: #fff;
+  border: 3px solid #333;
+  box-shadow: 3px 3px;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0 5px;
+  margin: 0 10px;
+  letter-spacing: 0.1px;
+}
+
+form {
+  flex-direction: column;
+  align-items: flex-end;
 }

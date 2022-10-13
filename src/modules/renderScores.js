@@ -6,7 +6,7 @@ const renderScores = async () => {
 
   const response = await fetch(`${url}`);
   const users = await response.json();
-  const list = users.result.map((user) => `<li>${user.user} : ${user.score}</li></br>`).join('');
+  const list = users.result.map((user) => `<li>${user.user}: ${user.score}</li>`).join('');
   scores.innerHTML = `${list}`;
 };
 
