@@ -24,6 +24,7 @@ footer,
 h1 {
   font-size: 2rem;
 }
+
 main {
   margin: 2rem;
   gap: 1rem 2rem;
@@ -67,7 +68,6 @@ button {
   cursor: pointer;
   padding: 0 5px;
   margin: 0 10px;
-  height: fit-content;
   letter-spacing: 0.1px;
 }
 
